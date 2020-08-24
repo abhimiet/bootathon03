@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Python Lab
+	</title>
+</head>
+<body>
+	<h3><a href="index.html">Python Programming Lab</a> >> <a href="list.html">List of Program</a> >> <a href="lab_1.html">Lab 1: String Slicing in Python</a> >> Simulation</h3>
+	<table border="2" width="100%">
+		<tr>
+			<td colspan="2">
+				<br>
+				<form id="frm1">
+					str = "<input type="text" name="str">"<br><br>
+					out = str[ <input type="text" name="lb" size="1"> : <input type="text" name="ub" size="1"> : <input type="text" name="gap" size="1"> ]<br><br>
+					print(out)<br><br>
+				</form>
+				<button onclick="myFunction()">Run</button><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Code</h4>
+			</td>
+			<td>
+				<h4>Output Screen</h4>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p id="auto_code">
+					str = "arpesh singh"<br>
+					out = str[2:10:2]<br>
+					print(out)
+				</p>
+			</td>
+			<td valign="top">
+				<p id="out_code">
+					>>ps i
+				</p>
+			</td>
+		</tr>
+	</table>
+	<script>
+		function myFunction()
+		{
+  			var x = document.getElementById("frm1");
+  			var text = "";
+    		text ="str = \""+ x.elements[0].value + "\"<br>" + "out = str["+x.elements[1].value+":"+x.elements[2].value+":"+x.elements[3].value+"]"+ "<br>" +"print(out)";
+  			document.getElementById("auto_code").innerHTML = text;
+  			var k = ">>";
+  			var i;
+  			for(i=Number(x.elements[1].value);i<Number(x.elements[2].value);i=i+Number(x.elements[3].value))
+  			{
+  				k +=x.elements[0].value.charAt(i);
+  			}
+  			document.getElementById("out_code").innerHTML = k;
+		} 
+	</script>
+</body>
+</html>
